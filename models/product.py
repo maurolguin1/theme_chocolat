@@ -8,10 +8,10 @@ class ProductTemplate(models.Model):
 	_inherit = 'product.template'
 
 	code = fields.Char(string="Code")
-	price_ttc = fields.Monetary(string="Prix de vente TTC", default=1.0, compute='_comute_price_ttc', digits=dp.get_precision('Product Price'))
+	price_ttc = fields.Monetary(string="Prix de vente TTC", default=1.0, compute='_compute_price_ttc', digits=dp.get_precision('Product Price'))
 
 	@api.depends('list_price', 'taxes_id')
-	def _comute_price_ttc(self):
+	def _compute_price_ttc(self):
 		for product in self:
 			if product.taxes_id:
 				taxe = product.taxes_id[0].amount/100
