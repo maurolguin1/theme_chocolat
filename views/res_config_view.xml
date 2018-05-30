@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<record id="choco_ecommerce_config" model="ir.ui.view">
+		<field name="name">Choco Ecommerce Config</field>
+		<field name="model">website.config.settings</field>
+		<field name="inherit_id" ref="website_sale.website_config_settings_view_form"/>
+		<field name="arch" type="xml">
+<!-- 
+			<field name="sale_delivery_settings" position="after">
+				<label for="free_shipping" style="color: white;"/>
+				<div>
+					<field name="free_shipping"/>
+					<label for="free_shipping" string="Free Shipping"/><br/>
+				</div>
+			</field>
+ -->
+			<xpath expr="//label[@for='salesteam_id']" position="attributes">
+				<attribute name="groups">sales_team.group_sale_manager</attribute>
+			</xpath>
+			<xpath expr="//div[@groups='base.group_no_one']" position="attributes">
+				<attribute name="groups">sales_team.group_sale_manager</attribute>
+			</xpath>
+			<xpath expr="//label[@for='salesperson_id']" position="attributes">
+				<attribute name="groups">sales_team.group_sale_manager</attribute>
+			</xpath>
+			<xpath expr="//div[@groups='base.group_no_one']" position="attributes">
+				<attribute name="groups">sales_team.group_sale_manager</attribute>
+			</xpath>
+
+		</field>
+	</record>
+</odoo>

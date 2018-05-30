@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<template id="choco_signup" inherit_id="auth_signup.signup" name="Choco Sign up login">
+			<xpath expr="//div[@class='clearfix oe_login_buttons']" position="replace">
+				<div class="clearfix oe_login_buttons">
+               <a t-attf-href="/web/login?{{ keep_query() }}" class="btn btn-primary pull-right">Back to Login</a>
+               <button type="submit" class="btn btn-primary pull-left">Sign up</button>
+            </div>
+			</xpath>
+		</template>
+<!-- 
+        <template id="choco_products_categories" inherit_id="website_sale.products" name="Show Choco Categories" active="False" customize_show="True">
+            <xpath expr="//div[@id='products_grid']" position="before">
+                <div class="alert-categ mt16">
+                    <t t-if="categories">
+                        <t t-foreach="categories" t-as="categ">
+                            <span t-esc="categ.name"/>&gt;
+                        </t>
+                    </t>
+                </div>
+            </xpath>
+        </template> -->
+
+        <template id="choco_address" inherit_id="website_sale.address" name="Choco address">
+            <xpath expr="//input[@name='field_required']" position="before">
+                <div class="col-xs-6">
+                    <div class="alert-warning metro_fr">
+                        <img src="/theme_chocolat/static/images/warning_alert.png" height="18"/> <span class="icon_txt">France Métropolitaine Uniquement.</span>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+
+		<template id="choco_checkout" inherit_id="website_sale.checkout" name="Choco Checkout">
+			<xpath expr="//div[@id='wrap']" positions="replace">
+				<div id="wrap">
+                <div class="container oe_website_sale" style="margin: 8%; width: 84%;">
+                    <t t-call="website_sale.wizard_checkout">
+                        <t t-set="step" t-value="20" />
+                    </t>
+                    <t t-set="same_shipping" t-value="bool(order.partner_shipping_id==order.partner_id or only_services)" />
+                    <div class="row">
+                        <div class="col-md-8 oe_cart">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 class="page-header mt16">Billing Address</h3>
+                                </div>
+                                <div class="col-md-6 one_kanban">
+                                    <t t-call="theme_chocolat.choco_address_kanban">
+                                        <t t-set='contact' t-value="order.partner_id"/>
+                                        <t t-set='selected' t-value="1"/>
+                                        <t t-set='readonly' t-value="1"/>
+                                    </t>
+                                </div>
+                            </div>
+                            <t t-if="not only_services">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3 class="page-header mt16">Shipping Address
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="row all_shipping">
+                                    <div class="col-md-12">
+                                        <div class="row mt8">
+                                            <div class="col-sm-12 col-md-12 one_kanban">
+                                                <form action="/shop/address" method="post" class=''>
+                                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                                                    <a class='a-submit btn btn-default mb16 btn-block'>
+                                                        <i class="fa fa-plus-square" aria-hidden="true"></i> Add an address
+                                                    </a>
+                                                </form>
+                                            </div>
+                                            <t t-foreach="shippings" t-as="ship">
+                                                <div class="col-sm-12 col-md-6 one_kanban">
+                                                    <t t-call="theme_chocolat.choco_address_kanban">
+                                                        <t t-set='contact' t-value="ship"/>
+                                                        <t t-set='selected' t-value="order.partner_shipping_id==ship"/>
+                                                        <t t-set='readonly' t-value="bool(len(shippings)==1)"/>
+                                                        <t t-set='edit_billing' t-value="bool(ship==order.partner_id)"/>
+                                                    </t>
+                                                </div>
+                                            </t>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                            <div class="clearfix" />
+                            <div>
+                                <a href="/shop/cart" class="btn btn-default mb32">
+                                    <span class="fa fa-long-arrow-left" /> Return to Cart</a>
+                                <a class="btn btn-default btn-primary pull-right mb32 " href="/shop/confirm_order">Confirm <span class="fa fa-long-arrow-right" /></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-offset-1 col-md-3 text-muted">
+                            <h3 class="page-header mt16">Your Order</h3>
+                            <t t-set="website_sale_order" t-value="website.sale_get_order()" />
+                            <t t-call="website_sale.total" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+			</xpath>
+		</template>
+
+		<template id="choco_address_kanban" name="Choco Adress Kanban">
+			<form action="/shop/checkout" method="POST" class='hide'>
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+            <input type="hidden" name="partner_id" t-att-value="contact.id" />
+            <t t-if='edit_billing'>
+               <input type="hidden" name="callback" value="/shop/checkout?use_billing" />
+            </t>
+            <input type='submit'/>
+         </form>
+         <a class='btn btn-link pull-right fa fa-edit js_edit_address no-decoration' title="Edit this address"></a>
+         <div t-att-class="'panel panel-default %s' % (selected and 'border_primary' or 'js_change_shipping')">
+            <div class='panel-body' style=''>
+               <t t-esc="contact" t-options="dict(widget='contact', fields=['name', 'address'], no_marker=True)"/>
+            </div>
+            <div class='panel-footer' t-if='not readonly'>
+               <span class='btn-ship' t-att-style="'' if selected else 'display:none;'">
+                  <a class="btn btn-block btn-primary">
+                     <i class='fa fa-check'></i> Ship to this address
+                  </a>
+               </span>
+               <span class='btn-ship' t-att-style="'' if not selected else 'display:none;'">
+                  <a class="btn btn-block btn-default">
+                     Select this address
+                  </a>
+               </span>
+            </div>
+         </div>
+		</template>
+
+        <template id="choco_products_item" inherit_id="website_sale.products_item" name="Choco Products Item">
+            <xpath expr="//a[@itemprop='name']" position="before">
+                <div class="oe_product_cart">
+                    <t t-esc="product.public_categ_ids[0].name"/>
+                </div>
+            </xpath>
+            <!-- <xpath expr="//span[@t-esc='product.website_price']" position="replace">
+                <span t-esc="product.price_ttc" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}" style="font-size: 20px;"/>
+            </xpath> -->
+        </template>
+
+
+        <template id="choco_payment" inherit_id="website_sale.payment" name="Choco Pyament">
+            <xpath expr="//div[@id='payment_method']" position="before">
+                <div>
+                    <span>En raison des fortes chaleurs, la livraison de votre commande peut être différé afin de garantir l'intégrité de votre commande. Nous vous remercions d'avance de votre compréhension.</span>
+                </div>
+            </xpath>
+        </template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+	</data>
+</odoo>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="choco_contactus_thanks" name="Choco contactus thanks" inherit_id="website_crm.contactus_thanks">
+		<xpath expr="//div[@id='wrap']" position="replace">
+			<div id="wrap" class="mt64">
+            <div class="oe_structure"/>
+            <div class="container bordered">
+               <div class="row">
+                  <div class="col-md-7 col-md-offset-1 thanks">
+               		<h1>Thanks!</h1>
+                     <div class="alert alert-success">
+                        Your message has been sent successfully.
+                        <button type="button" class="close" data-dismiss="alert">&amp;times;</button>
+                     </div>
+                     <p>
+                        <h4>We will get back to you shortly.</h4>
+                     </p>
+<!-- 
+                     <p class="mt64">
+                        If you have an emergency, do not hesitate to contact us by phone:
+                     </p>
+                     <ul class="list-unstyled">
+                        <li><i class="fa fa-phone"></i> : <span t-field="res_company.phone"/></li>
+                        <li><i class="fa fa-envelope"></i> : <span t-field="res_company.email"/></li>
+                     </ul>
+ -->
+                  </div>
+                  <div class="col-md-4 mt64">
+                     <t t-call="website.company_description"/>
+                  </div>
+               </div>
+            </div>
+            <div class="oe_structure"/>
+         </div>
+		</xpath>
+	</template>
+
+</odoo>

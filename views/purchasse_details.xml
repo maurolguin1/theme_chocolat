@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="purchasse_portal_layout" name="purchasse details" inherit_id="website_portal.portal_layout">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div class="myContainer">
+
+                <!-- <div class="tablette-menu taBlette-gamme" style="margin-top:3.5%;">
+                    Vos devis:
+                </div>
+                <div class="tablette-menu taBlette-gamme" style="margin-top:3.5%;">
+                    Vos devis:
+                </div>
+                <div class="tablette-menu taBlette-gamme" style="margin-top:3.5%;">
+                    Vos devis:
+                </div> -->
+
+                <div class="container mb64">
+                    <div class="col-md-9 tablette-menu taBlette-gamme" style="margin-top:7.7%; width:75%;">
+                        <t t-raw="0"/>
+                    </div>
+                    
+                    <div id="o_my_sidebar" class="col-md-3 col-md-offset-0 o_my_sidebar" style="margin-top:3%;">
+                        <div class="o_my_contact" t-if="sales_rep">
+                            <t t-call="website_portal.contact"/>
+                        </div>
+                        <div class="o_my_details">
+                            <h3 class="page-header">Your Details <a href="/my/account" class="btn btn-default btn-xs">Change</a></h3>
+                            <div t-field="user.partner_id" t-options='{"widget": "contact", "fields": ["email", "phone", "address", "name"]}'/>
+                        </div>
+                        <div class="o_my_archives" t-if="archive_groups">
+                            <t t-call="website_portal.portal_archive_groups"/>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-md-6" id="pDetails">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </xpath>
+</template>
+
+
+
+
+</odoo>

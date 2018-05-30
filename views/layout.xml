@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <data>
+
+<!-- LOAD EXTERNAL CSS -->
+<template id="mystyle" name="My style" inherit_id="website.assets_frontend">
+      <xpath expr="link[last()]" position="after">
+          <link href="/theme_chocolat/static/less/styles.less" rel="stylesheet" type="text/less"/>
+      </xpath>
+</template>
+
+
+<!-- Customize header  -->
+<template id="custom_header" inherit_id="website.layout" name="Custom Header">
+
+  <!-- LOAD STYLE FILES --> 
+
+  <!-- Assign an id  -->
+  <xpath expr="//div[@id='wrapwrap']/header" position="attributes">
+    <attribute name="id">my_header</attribute>
+  </xpath>
+
+  <!-- Add an element after the top menu  -->
+    <xpath expr="//div[@id='wrapwrap']/header/div" position="after">
+        <div class="container">
+            <div class="my-header-menu">
+                  <center>
+          <p id="categoryMenu" onclick="screenMenu()" style="cursor:pointer; color:#333;">MENU</p>
+          <p id="categoryMenucontent" style="visibility: hidden; display: none; z-index: 9999;">
+            
+            
+            </p>
+          <div class="menuItems" id="tab" style="border-left:none;">
+            <a href="/shop/category/tablettes-13">
+              <div data-original-title="" title="">
+                <span class="fa fa-th fa-3x" style="font-size:28px;"/>
+              </div>
+              <div class="sFont">
+                Tablettes
+              </div>
+            </a>
+          </div>
+          <div class="menuItems" id="confie">
+            <a href="/shop/category/confiseries-et-coffrets-14">
+              <div>
+                <span class="fa fa-gift fa-3x" style=""/>
+              </div>
+              <div class="sFont">
+                    Confiseries et cadeaux
+              </div>
+            </a>
+          </div>
+          <div class="menuItems" id="bio" style="border-left:none;">
+            <a href="/shop/category/bio-15">
+              <div>
+                <span class="fa fa-pagelines fa-3x" data-original-title="" title="" style=""/>
+              </div>
+              <div class="sFont">
+                Bio
+              </div>
+            </a>
+          </div>
+          <div class="menuItems" id="matiere" style="border-left:none;">
+            <a href="/shop/category/matieres-premieres-16">
+              <div data-original-title="" title="">
+                <span class="fa fa-leaf fa-3x" style=""/>
+              </div>
+              <div class="sFont">
+                 Produits professionnels
+              </div>
+            </a>
+          </div>
+
+          <!--div class="menuItems" id="atelierC" style="border-right:none;">
+            <a href="/shop/category/aterlier-c-17">
+              <div>
+                <span class="fa fa-shopping-basket fa-3x" style=""/>
+              </div>
+              <div class="sFont">
+                Atelier C
+              </div>
+            </a>
+          </div-->
+
+          <div class="menuItems" style="border-right:none;">
+            <a href="/shop">
+              <div>
+                <span class="fa fa-archive fa-3x"/>
+              </div>
+              <div class="sFont"> Tous les pro</div>
+            </a>
+          </div>
+          <p/>
+          <p/>
+        </center>         
+            </div>
+        </div>       
+    </xpath>
+
+</template>
+
+
+<template id="choco_footer_custom" inherit_id="website.footer_default" name="Chocolaterie Footer">
+
+  <xpath expr="//ul[@id='products']" position="replace">
+    <div class="categorifooter">
+        <h4>Condition de livraison</h4>
+        
+    </div>
+
+  </xpath>
+  <xpath expr="//div[@id='info']" position="replace">
+    <div class="col-md-4 " id="info">
+      <h4>Connect with us</h4>
+      <!-- <ul class="list-unstyled">
+        <li><a href="/page/website.contactus">Contact us</a></li>
+      </ul> -->
+      <ul class="list-unstyled">
+        <li t-ignore="true"><i class="fa fa-phone"></i> <span t-field="res_company.phone"></span></li>
+        <li t-ignore="true"><i class="fa fa-envelope"></i>  <span t-field="res_company.email"></span></li>
+      </ul>
+      <div class="hidden">
+        <h4 style="display: inline;">Follow us </h4>
+        <h3 style="marging-top: 5px; display: inline;">
+          <a t-att-href="website.social_facebook" t-if="website.social_facebook"><i class="fa fa-facebook-square"/></a>
+          <a t-att-href="website.social_twitter" t-if="website.social_twitter"><i class="fa fa-twitter"/></a>
+          <a t-att-href="website.social_linkedin" t-if="website.social_linkedin"><i class="fa fa-linkedin"/></a>
+          <a t-att-href="website.social_youtube" t-if="website.social_youtube"><i class="fa fa-youtube-play"/></a>
+          <a t-att-href="website.social_googleplus" t-if="website.social_googleplus" rel="publisher"><i class="fa fa-google-plus-square"/></a>
+          <a t-att-href="website.social_github" t-if="website.social_github"><i class="fa fa-github"/></a>
+        </h3>
+      </div>
+    </div>
+  </xpath>
+  <xpath expr="//div[@class='col-md-4 col-lg-5 col-lg-offset-1']" position="replace">
+    <div class="col-md-4 col-lg-4">
+      <h4>
+        <span t-field="res_company.name" />
+        <small> - <a href="/page/services">About us</a></small>
+      </h4><!-- 
+      <div>
+          <p>
+              We are a team of passionate people whose goal is to improve everyone's
+              life through disruptive products. We build great products to solve your
+              business problems.
+          </p>
+          <p>
+              Our products are designed for small to medium size companies willing to optimize
+              their performance.
+          </p>
+      </div> -->
+      <t t-call="website.language_selector"/>
+    </div>
+  </xpath>
+
+</template>
+
+  <template id="choco_layout_footer_copyright" inherit_id="website.layout_footer_copyright">
+    <!-- <div class="pull-right" position="replace"/> -->
+
+    <div class="pull-left text-muted" position="replace">
+      <div class="pull-left text-muted" style="color: #26292b;">
+        Copyright &amp;copy; <a href="http://www.chocolaterierobert.com" style="color: #26292b;"> <span t-field="res_company.name" itemprop="name"/></a>
+      </div>
+    </div>
+
+  </template>
+
+  <template id="choco_o_sub_menu_footer" inherit_id="web.menu_secondary">
+    <div class="o_sub_menu_footer" position="replace"/>
+  </template>
+
+  </data>
+</odoo>

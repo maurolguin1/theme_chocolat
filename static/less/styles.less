@@ -1,0 +1,1363 @@
+body {
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: inherit;
+    a{
+        background-color: transparent;
+        //color: #26292b;
+        color: inherit;
+    }
+    a:hover{
+        color: inherit;
+    }
+    /*a:active{
+        background-color: inherit;
+        color: inherit;
+        //font-weight: bold;
+    }*/
+}
+
+.services {
+    background: #EAEAEA;
+    padding: 1em;
+    margin: 2em 0 3em;
+    li {
+        display: block;
+        position: relative;
+        background-color: #16a085;
+        color: #FFF;
+        padding: 2em;
+        text-align: center;
+        margin-bottom: 1em;
+        font-size: 1.5em;
+    }
+}
+
+
+//adjust caroussel position
+
+.slidePos{
+        //margin: 4.2% -2.6% 0px 0%;
+        //margin: 4.2% -1.6% 0px 0%;
+        margin: 5.6% -1.6% 0px 0%
+}
+
+
+
+h1{
+    color: #222222;
+}
+
+
+/*****************HEADER STYLES*******************/
+//hr style
+hr.style7 {
+    border-top: 1px solid #8c8b8b;
+    border-bottom: 1px solid #fff;
+}
+/*************CONTENT STYLES**********************/
+
+.container{
+    border: none;
+    width: 99.9%;
+    padding: 0px;
+}
+.alert, .alert-info {
+    border: none;
+    margin-top: 0px;
+    //background-color: red;
+}
+
+
+/********** MENU STYLES START HERE*********/
+@font-face {
+    font-family: myfont-menu;
+    src: url('Lobster.woff');
+    -webkit-font-smoothing: antialiased;
+}
+
+
+
+    .my-header-menu{ // THIS CLASS IS FOR PRODUCT CATEGORIE ON THE HEADER
+            
+        margin-top: -31px;
+        padding-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: whitesmoke; 
+        height: 60px;
+        min-width: 60%;
+        z-index: 999;
+        position: relative;
+        -moz-transition: all 0.3s;
+        -webkit-transition: all 0.8s;
+        transition: all 0.3s;
+        font-size: 11px;
+        z-index: 3000;
+        border-radius: 100px;
+        max-width: 60%;
+        
+        a{
+            /*text-decoration: none;
+            color: #e6e3bb;
+            margin-left: 0.3%;
+            margin-right: 0.3%;*/
+            /*text-decoration: none;
+            color: #d4d2d2;
+            margin-left: 0.3%;
+            margin-right: 0.3%;
+            font-family: "Century Gothic","Lucida Grande",Arial,sans-serif;
+            font-weight: bolder;
+            font-size: large;*/
+            color: inherit;
+        }:hover{
+                 color: inherit;
+             }
+    }
+
+.shop_addr{
+    //position: inherit;
+    border: solid thin lightgray;
+    width: auto;
+    padding: 2px 19px 2px 19px;
+    /* margin-left: 26.8%; */
+    z-index: 10000;
+    visibility: visible;
+    border-radius: 6px;
+    color: #337ab7;
+}
+
+
+//categorie link style above slide on main page
+.cate{
+    a{
+        color: #89492f;
+        font-size: 26px;
+    }:hover{
+        text-decoration: none;
+    }
+}
+
+
+/******************menu principal style and background ******************/
+.navbar, .navbar-default{
+    background-color: white;
+    /* border-top-width: 5px; */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    //border-bottom-style: dashed;
+    padding-bottom: 18px;
+}
+
+
+//remove blank upon slide to nav
+.mt0 {
+    margin-top: -10px !important;
+}
+/***************CATEGORY MENU*********************** ******/
+#categoryMenu{
+    font-weight: bold;
+    color: #e6e3bb;
+    display: none;
+}
+#categoryMenucontent{
+    display: inline;
+}
+
+
+////////////remove blank under category menu for device less than 1024 px screen res
+/*@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+    .my-header-menu{ // THIS CLASS IS FOR PRODUCT CATEGORIE ON THE HEADER
+        margin-bottom: -20px;
+    }
+}*/
+
+
+
+//////////////put category menu to 100% if screen is less than 769 px
+@media only screen and (max-width: 890px) {
+    .my-header-menu{ // THIS CLASS IS FOR PRODUCT CATEGORIE ON THE HEADER
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+
+    width: 100%;
+    margin-top: -66px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.3s;
+    font-size: 11px;
+    z-index: 3000;
+    border-radius: 2px; 
+
+
+
+        a{
+            display: block;
+            //border-bottom: thin dotted;
+        }
+    }
+
+    #categoryMenucontent{
+        visibility: hidden;
+        display: none;
+    }
+
+    #categoryMenu{
+        margin-bottom: 6px;
+        visibility: visible;
+        display: inline;
+    }
+    .menuItems{
+        display: none;
+    }
+    
+}
+
+@media only screen and (max-width: 500px) {
+    .my-header-menu{ // THIS CLASS IS FOR PRODUCT CATEGORIE ON THE HEADER
+        margin-top: -100px;
+    }
+
+    .pDesc{
+            margin-bottom: -26%;
+    }
+}
+
+
+/****************logo design*******************/
+header a.navbar-brand img {
+    margin: 0;
+    max-height: 120px;
+    /* margin-left: 65px; */
+    margin-top: -4px;
+    /* border-radius: 4px; */
+    margin-top: 9px;
+    margin-left: -1px;
+    border-radius: 8px;
+}
+
+/********** main menu text style ***********/
+.navbar-default .navbar-nav > li > a{
+    //color: #e6e3bb;
+    color: black;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > li > a:hover{
+     color: #d0ceb1;
+ }
+
+//**********styling active class on menu
+#wrapwrap{
+
+    overflow: hidden;
+    /*a{
+        background-color: inherit;
+    }*/
+
+    a:active{
+        background-color: inherit;
+        color: inherit;
+        //font-weight: bold;
+    }
+    /*a:visited{
+        background-color: #26292b;
+        color: #89492f;
+        font-weight: bold;
+    }*/
+    .navbar-default .navbar-brand{
+         font-style: italic;
+         color: #e6e3bb;
+         font-family: myfont-menu;
+         font-size: xx-large;
+
+        a:hover{
+            color: inherit;
+        }
+     }
+
+    .navbar-default .navbar-nav > li > a:visited{
+        background-color: #26292b;
+        color: #d2cfa8;
+    }
+
+    /**hr{
+        height: 2px;
+        color: brown;
+    }*/
+
+}
+
+
+
+.navbar-right {
+    //float: left !important;
+    margin-right: -8px;
+    display: inline-flex;
+    visibility: visible;
+    text-transform: uppercase;
+    font-size: smaller;
+}
+
+/////////////adjust logo pos
+navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: -42px;
+}
+
+/*************************************banner with logo style ***********************/
+#logo-left{
+    //width: 20%;
+    //height: 148px;
+    //border:  thin dotted ;
+    //float: left;
+    /*z-index: 999;
+    display: block;
+    margin-top: 500px;
+
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #89492f;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 30px;
+    width: 60%;
+    color: #e6e3bb;
+    z-index: 5;*/
+    a{
+        color: #e6e3bb;
+        text-decoration: none;
+    }
+    a:hover{
+        color: #d0ceb1;
+    }
+}
+
+
+
+/*************************SLIDE**********************************************/
+.o_gallery.o_slideshow .carousel ul.carousel-indicators > *, .modal-body.o_slideshow .carousel ul.carousel-indicators > * {
+    background-color: #fff;
+    //background-size: cover;
+    background-image: none;
+    border: 1px solid #aaa;
+    border-radius: 0px;
+    display: inline-block;
+    list-style-image: none;
+    //margin: 0 0 5px 5px;
+    padding: 0;
+    text-indent: initial;
+    width: 15px;
+    height: 9px;
+    visibility: hidden;
+    //margin: 0px;
+    height: 0px;
+}
+
+
+
+.carousel .carousel-control.left {
+    //left: -10px;
+    color: #89492f;
+}
+.carousel .carousel-control.right {
+    //right: -10px;
+    color: #89492f;
+}
+
+.o_gallery.o_slideshow .carousel img {
+    max-height: 100%;
+    /* max-width: 100%; */
+    margin: auto;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    line-height: 1;
+    //height: 550px;
+    max-width: 100%;
+}
+/*****************************footer***************************************/
+//copyright styles
+footer {
+    background-color: #26292b;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 333;
+}
+
+//footer styles
+footer #footer {
+    
+    background-color: #26292b;
+    color: lightgray;
+    display: block;
+    position: relative;
+    //margin-bottom: 9px;
+    //color: #bc7e40;
+    width: 100%;
+    a{
+            color: GREY;
+            font-size: small;
+    }
+
+    .list-inline > li {
+    /* display: inline-block; */
+    padding-left: 5px;
+    padding-right: 5px;
+   }
+}
+
+footer #footer {
+    padding-top: 12px;
+}
+
+/*****************product on home page****************************/
+.produit1{
+    background-color: #e4c194;
+    padding-top: 10px;
+    opacity: 0.8;
+    a{
+        background-color: transparent;
+        color: #e6e3bb;
+        border: none;
+    }:hover{
+        background-color: transparent;
+         }
+}
+////////////define style for top border upon product image
+.p1{
+    border-top: solid 6px #e4c194;
+}
+
+.mt0{
+    margin-left: 6px;
+    margin-right: 6px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.produit2{
+    //background-color: #e9eef0;
+    //background-color: #f6f2f9;
+    background-color: #fcf8ff;
+    padding-top: 10px;
+    a{
+        background-color: transparent;
+        color: #e6e3bb;
+        border: none;
+    }:hover{
+         background-color: transparent;
+     }
+}
+.p2{
+    border-top: solid 6px #c9ced0;
+}
+
+.produit3{
+    background-color: #d4e5f4;
+    padding-top: 10px;
+    a{
+        background-color: transparent;
+        color: #e6e3bb;
+        border: none;
+    }:hover{
+         background-color: transparent;
+     }
+}
+.p3{
+    border-top: solid 6px #b7cdd4;
+}
+.produit4{
+    background-color: goldenrod;
+    padding-top: 10px;
+    a{
+        background-color: transparent;
+        color: #e6e3bb;
+        border: none;
+    }:hover{
+         background-color: transparent;
+     }
+}
+.p4{
+    border-top: solid 6px goldenrod;
+}
+
+.produit5{
+    background-color: #40238f;
+    padding-top: 10px;
+    a{
+        background-color: transparent;
+        color: #e6e3bb;
+        border: none;
+    }:hover{
+         background-color: transparent;
+     }
+}
+.p5{
+    border-top: solid 6px #3e82da;
+}
+.produit6{
+    background-color: #bb340b;
+    padding-top: 10px;
+    a{
+        background-color: transparent;
+        color: #4db9cc;
+        border: none;
+    }:hover{
+         background-color: transparent;
+     }
+}
+.p6{
+    border-top: solid 6px #89492f;
+    //border-top: solid 6px #bc7e40;
+}
+.produit7{
+    background-color: #4f1b24;
+    padding-top: 10px;
+    a{
+        background-color: transparent;
+        color: #e6e3bb;
+        border: none;
+    }:hover{
+         background-color: transparent;
+     }
+}
+.p7{
+    border-top: solid 6px #5e1e2b;
+}
+//////////////////resize default col bootstrap class
+@media only screen and (min-width: 1024px) {
+    .col-md-3{
+        //width: 238px;
+        //border: thin dotted;
+        width: 23.5%;
+    }
+}
+
+@media only screen and (min-width: 1026px) {
+    .col-md-3{
+        //width: 238px;
+        //border: thin dotted;
+        width: 24%;
+    }
+}
+
+
+/*******************************main page products style*********************/
+.ptitle{
+    /*padding-left: 5px;
+    padding-right: 5px;*/
+    a:link{
+        padding-top: 16px;
+        padding-bottom: 13px;
+        padding-left: auto;
+        padding-right: auto;
+        color: #905d27;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: larger;
+        font-weight:bold;
+    }:hover{
+        text-decoration: none;
+         }
+    padding-bottom: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.pleft{
+    margin-left:0px;
+}
+.pright{
+    margin-right: 0px;
+}
+.row{
+    /*padding-left: auto;
+    padding-right: auto;*/
+}
+
+/****anim pict************/
+.pzoom{
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/******************************product page**********************************/
+//.oe_product .oe_product_image {
+    /*position: inherit;
+   left: 15px;
+   right: 15px;
+   top: 15px;
+   bottom: 55px;
+   margin-bottom: 60px;
+   text-align: center;
+   width: 290px;
+   height: 290px;*/
+//}
+
+
+.copyrightFooter{
+    text-transform: lowercase;
+    font-size: 12px;
+    
+    a:link{
+        text-transform: lowercase;
+        font-size: 12px;
+    }
+}
+
+    ////////****************address css on contact page******************///////////////
+address {
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    color: brown;
+    //margin-top: 25%;
+    font-size: x-large;
+}
+
+.form-horizontal .control-label {
+    text-align: right;
+    margin-bottom: 0;
+    padding-top: 7px;
+    //color: brown;
+}
+
+/*******************************fixe menu position********************/
+.o_main_navbar {
+    height: 34px;
+    border: 1px solid #5f5e97;
+    background-color: #7c7bad;
+    color: white;
+    -webkit-box-shadow: 0px 0px 8px #4c4c4c;
+    box-shadow: 0px 0px 8px #4c4c4c;
+    z-index: 1009;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.oe_login_form, .oe_signup_form, .oe_reset_password_form {
+    max-width: 300px;
+    position: relative;
+    margin: 120px auto;
+}
+
+@media screen and (max-width: 400px) {
+    .brandTxt{
+        display: none;
+        visibility: hidden;
+    }
+}
+
+
+/****************mobile styles **********/
+//for device less than 400px in portrait
+@media only screen and (max-width: 500px) {
+    
+    //align logo with menu
+    .navbar-brand {
+             float: none; 
+            padding: 15px 15px;
+            font-size: 18px;
+            line-height: 20px;
+            height: 50px;
+    }
+
+    //adjust caroussel position
+    .slidePos{
+        margin: 24.2% -3.6% 0px -2%;
+    }
+
+    header a.navbar-brand img {
+        width: 20%;
+        margin: 0;
+        max-height: 79%;
+        margin-left: -1px;
+        border-radius: 8px;
+        /*border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        margin-top: -3px;*/
+    }
+
+    .navbar-toggle {
+            position: relative;
+            float: right;
+            margin-right: 15px;
+            padding: 9px 10px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            visibility: hidden;
+    }
+
+    //remove blank on main page after slide
+    .rmBlank{
+        margin-top: -19%;
+        font-size: x-large;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+
+    .navbar-toggle {
+            position: relative;
+            float: right;
+            margin-right: 15px;
+            padding: 9px 10px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            background-color: transparent;
+            background-image: none;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            visibility: hidden;
+    }
+
+    //show picto menu
+    .pictoMenu{
+        visibility: visible;
+        display: inline;
+        //margin-right: -6%;
+        visibility: visible;
+        color: #26292b;
+        position: absolute;
+        font-size: 20px;
+        margin-top: 3%;
+        right: 4px;
+
+            li{
+                display: inline;
+                list-style-position: outside;
+                list-style: none;
+                top: 6%;
+            }
+    }
+
+    .navbar-right{
+        visibility: hidden;
+    }
+    /*.pictoMenu {
+        visibility: visible;
+        color: #26292b;
+        position: absolute;
+        font-size: 20px;
+        margin-top: 3%;
+        right: 4px;
+    }*/
+    #products_grid .oe_product.oe_grid {
+        //height: 400px;
+        margin-bottom: 27%;
+    }
+
+    
+
+}
+
+/*****************menu in picto for small devices *************/
+ @media only screen and (min-width: 771px) {   
+    .pictoMenu{
+        visibility: hidden;
+        display:inline;
+        float: right;
+        color:white;
+        margin-right:-40px;
+        margin-bottom: -10px;
+        color: #727369;
+
+        li{
+            font-size:40px;
+            display:inline;
+            list-style-position:outside;
+            list-style: none;
+            padding-left:10px;
+            padding-right:10px;
+        }
+    }
+
+    
+}
+
+
+
+/******************adjust product items description ****************/
+
+
+// for all device which resolution is less than 900px
+@media only screen and (max-width: 800px) {   
+    .pDesc{
+        background-color:white;
+        color:#3f3f3f;
+        display:block;
+        left:0%;
+        right:0%;
+        margin-bottom: -14%;
+        border-bottom: thin dotted #89492f;
+    }
+    /***table product separator ***/
+    .tdSeparator{
+        height:0px;
+        display:inline-block;
+    }
+
+    .tablette-menu {
+        margin-top: 0;
+        width: 100%;
+    }
+}
+
+
+// for device bigger than 800px 
+@media only screen and (min-width: 800px) {   
+    .pDesc{
+        background-color:white;
+        color:#3f3f3f;
+        display:block;
+        left:0%;
+        right:0%;
+        margin-bottom: -30%;
+        border-bottom: thin dotted #89492f;
+    }
+    /***table product separator ***/
+    .tdSeparator{
+        height:170px;
+        display:inline-block;
+    }
+}
+
+
+/************center product items on ipad portrait************/
+@media only screen and (max-width: 800px) and (min-width: 768px)  {
+    .centerProduct{
+        margin-left: 25%;
+    }
+
+    //adjust banner positions
+    .slidePos {
+        margin: 12.2% -2.6% 0px -1%;
+    }
+}
+//adjust banner position on landscape device
+@media only screen and (max-width: 600px) and (min-width: 500px)  {
+    /*.centerProduct{
+        margin-left: 25%;
+    }*/
+
+    //adjust banner positions
+    .slidePos {
+        margin: 13.0% -2.6% 0px -1%;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 502px)  {
+    
+    .rmBlank{
+        margin-top: -12%;
+        font-size: x-large;
+    }
+}
+
+@media only screen and (max-width: 740px) and (min-width: 630px)  {
+    
+    .rmBlank{
+        margin-top: -10%;
+        font-size: x-large;
+    }
+}
+@media only screen and (max-width: 800px) and (min-width: 550px)  {  // (min-width: 760px)
+    
+    .rmBlank{
+        margin-top: -9%;
+        font-size: x-large;
+    }
+    header a.navbar-brand img {
+        margin: 0;
+        max-height: 79px;
+        margin-left: -1px;
+        margin-top: -3px;
+        border-radius: 4px;
+    }
+}
+
+/***********my divider ************/
+@media only screen and (max-width: 1000px) {
+    .mydivider{
+        visibility: hidden;
+        display: inline;
+    }
+        //adjust product decription on one 1 product selected
+    .adjuster{
+        margin-top: 14.5%;
+        color:red;
+    }
+}
+
+@media only screen and (min-width: 1010px) {
+    .mydivider{
+        visibility: visible;
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background-color:#26292b;
+        margin-bottom:2px;
+        //border-radius: 2px;
+    }
+
+        //adjust product decription on one 1 product selected
+    .adjuster{
+        margin-top: 7.58%;
+        color:red;
+    }
+}
+
+/**************link color at footer ***********/
+.fLink{
+
+    a{
+        color:#26292b;
+    }
+
+    a:hover{
+        //text-decoration: none;
+    }
+}
+
+.list-inline > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/******************** banner on tablette *****************/
+.taBlette{
+    margin-top: -4px;
+    
+    img{
+        vertical-align: bottom;
+    }
+}
+
+/************************remove white background on navigation on mozilla firefox *******/
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #e6e3bb;
+    //background-color: #26292b;
+    background-color: transparent;
+}
+
+/*************address details on bill proceses *******************/
+address {
+    color: black;
+    //font-size: 14px;
+    font-size: inherit;
+    /* font-family: monospace; */
+    letter-spacing: 0px;
+}
+
+
+/**********************menu items**********************/
+
+
+@media only screen and (min-width: 801px) {
+    .menuItems{
+    display: inline-block;
+    margin-top: -15px;
+    border-left: solid thin lightgray;
+    border-right: solid thin lightgray;
+    margin-left: -4px;
+    min-width: 146px;
+    max-width: 146px;
+    }
+    .menuItems a{
+        text-decoration: none;
+    }
+
+    .tablette-menu{
+        margin-top: -1.5%;
+        z-index: 100;
+        /* color: #dacccc; */
+        position: absolute;
+        left: 0%;
+        //font-family: sans-serif;
+    }
+
+}
+
+/****************menut items hover ****************/
+#bio .fa :hover{
+    color: #20a056;
+}
+
+
+/************login form at main login page ******************/
+.oe_login_form, .oe_signup_form, .oe_reset_password_form {
+    max-width: 300px;
+    position: relative;
+    margin: 120px auto;
+    margin-top: 154px;
+}
+
+/********************menu font styles***********/
+#wrapwrap .navbar-default .navbar-nav > li > a:visited {
+    background-color: #26292b;
+    color: #646464;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #646464;
+    background-color: transparent;
+}
+
+/*******************sous categories font*******************/
+.sFont {
+    font-size: 13px;
+}
+
+
+
+
+
+
+/************************* meuilleur vente sur landing page ***************************/
+.bestSelling{
+    
+}
+
+
+/*******************************styles for user login at menu*****************************/
+#wrapwrap .navbar-default .navbar-nav > li > a:visited {
+    background-color: white;
+}
+
+
+/***********************sous categories tablettes******************************/
+
+.taBlette-gamme{
+        
+    padding: 6px 6px 6px 6px;
+    font-weight: lighter;
+    color: black;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    width: 120px;
+    border: solid thin lightgray;
+    margin-left: 8px;
+}
+
+.last-a{
+    
+    //border-right: solid thin darkgray;
+}
+
+.span-divider{
+    font-size: 9px;
+    position: relative;
+    top: -2px;
+    display: none;
+}
+.tab-trie{
+    padding: 11px 19px 9px 19px;
+    font-size: 14px;
+    /*border-top: solid thin darkgray;
+    border-bottom: solid thin darkgray;*/
+    color: lightgray;
+    display: inline-block;
+    
+}
+
+
+.oe_product .oe_product_image  {
+    /*max-width: 100%;
+    max-height: 155%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -66px;
+    right: 0;
+    z-index: -16;*/
+    /*max-width: 124%;
+    max-height: 126%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -2;*/
+}
+
+
+/********************* menu on hover *****************/
+        #bio :hover{
+            color: #8fc647;
+            text-decoration: none;
+        }
+        
+        #matiere :hover{
+            color: rgb(230, 142, 4);
+             text-decoration: none;
+        }
+        
+        #confie :hover{
+            color: rgb(4, 126, 175);
+             text-decoration: none;
+        }
+        
+        #tab :hover{
+            color: #924537;
+             text-decoration: none;
+        }
+        
+        .taBlette-gamme a{
+            color: black;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+        
+        .taBlette-gamme a:hover{
+            //font-weight: bold;
+            text-decoration: none;
+            color: darkgray;
+        }
+
+
+        #atelierC :hover{
+            color: #968a74;
+            text-decoration: none;
+        }
+
+.btn-link {
+    color: #26292b;
+    font-weight: normal;
+    border-radius: 0;
+    font-size: 26px;
+}
+
+
+/***********valide payment********************/
+.doPay {
+    position: absolute;
+    right: -77%;
+    top: 74%;
+}
+
+.badge{
+        background-color: #337ab7;
+}
+
+
+/******************remove overlayed div on payement process on small screen*********************/
+@media only screen and (max-width: 750px) {
+    .rmv{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .rmv2{
+        float: right;
+    }
+}
+
+/*************************add space on left and right****************************/
+@media only screen and (max-width: 900px) {
+    .addMargin{
+        margin-left: 13px;
+        margin-right: 13px;
+
+    }
+    .putLeft-pan{
+        float: left !important;
+        width: 100%;
+    }
+}
+
+
+.iPayVutton{
+        //margin-bottom: 14%;
+        //visibility: hidden;
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .tablette-menu {
+        margin-top: 0px;
+        //display: none;
+        width: 100%;
+    }
+    .payTop{
+        margin-top: 49px;
+        margin-left: 13px;
+    }
+
+    .iPayVutton{
+        margin-bottom: 14%;
+        visibility: visible;
+    }
+
+
+}
+
+
+
+
+/*********************remove blank***************************/
+.quotecarousel {
+    padding-bottom: 0;
+}
+
+.mt16{
+    margin-top: 14px !important;
+}
+
+
+abbr[title] {
+    border-bottom: none;
+}
+
+.panel-default {
+    border-color: #dddddd;
+    padding: 0;
+}
+
+
+/***************text on banner at landing page *****************/
+.txtDeco{
+    background-color: #1111116e;
+    padding-left: 14px;
+    padding-right: 14px;
+    border: solid thin #d3d3d35e;
+}
+
+
+.carousel-indicators{
+    //display: none;
+}
+
+@media only screen and (max-width: 500px){
+    .tablette-menu {
+        margin-top: 35%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .pDesc {
+        background-color: white;
+        color: #3f3f3f;
+        display: block;
+        left: 0%;
+        right: 0%;
+        margin-bottom: -25%;
+        border-bottom: thin dotted #89492f;
+    }
+}
+
+
+
+@media only screen and (max-width: 1024px) and (min-width: 1000px)  { 
+    .my-header-menu{
+        max-width: 72%
+    }
+
+    .pDesc{
+        margin-bottom: -47%;
+    }
+
+    .adjusterIpad{
+        margin-top: 17%;
+    }
+}
+
+
+@media only screen and (min-width: 1025px){ 
+    .adjusterIpad{
+        margin-top:14%;
+    }
+}
+
+@media only screen and (max-width: 999px){ 
+    .adjusterIpad{
+        margin-top:14%;
+    }
+}
+
+
+.slideStyleslanding {
+    border: solid thin white;
+    background-color: #ffffffc9;
+    padding-bottom: 39px;
+    // border-top-left-radius: 180px;
+    // border-bottom-right-radius: 180px;
+}
+
+.carousel-Adjuster{
+    height: 89%;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+
+
+.putTxt{
+    font-size: 20px;
+}
+
+.borderRemover{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.txtArea {
+    border: solid thin lightgray;
+    margin: 14px 1.07813px 0px 1.0625px
+    height: 94px;
+}
+
+.alert-categ {
+    border: 3px solid #FDFDFD;
+    padding: 3px 2px 3px 10px;
+    background-color: #FCFCFC;
+    text-align: left;
+    width: 87%;
+    font-size: 20px;
+    color: #808080;
+}
+
+.metro_fr {
+    margin-top: 24px;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.icon_txt {
+    margin-left: 4px;
+}
+
+.bordered {
+    margin-top: 8%;
+}
+
+.thanks {
+    
+}

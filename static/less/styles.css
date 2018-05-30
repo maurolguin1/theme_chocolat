@@ -1,0 +1,67 @@
+.services {
+    background: #EAEAEA;
+    padding: 1em;
+    margin: 2em 0 3em;
+li {
+    display: block;
+    position: relative;
+    background-color: #16a085;
+    color: #FFF;
+    padding: 2em;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+}
+
+
+h1{
+    color: gold;
+}
+
+
+/*****************HEADER STYLES*******************/
+
+
+/*************CONTENT STYLES**********************/
+
+.container{
+    border: none;
+    width: 90%;
+}
+.alert, .alert-info {
+    border: none;
+    margin-top: 0px;
+    background-color: red;
+}
+
+
+/********** MENU STYLES START HERE*********/
+.my-header-menu{
+    border-bottom: solid thin;
+    margin-top: 50px;
+    height: 150px;
+    width: 75%;
+}
+
+.navbar, .navbar-default{
+    background-color: #26292b;
+    border-top: solid brown;
+    border-top-width: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}.active{
+     background-color: green;
+ }
+
+.nav, .navbar-nav, .navbar-right {
+    background-color:  brown;
+}
+
+.navbar-header{
+    font-style: italic;
+}
+a:hover{
+    color: green;
+}

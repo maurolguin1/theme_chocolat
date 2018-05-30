@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="res_company_chocolaterie_view" model="ir.ui.view">
+			<field name="name">res.company.inherit.view</field>
+			<field name="model">res.company</field>
+			<field name="inherit_id" ref="base.view_company_form" />
+			<field name="arch" type="xml">
+<!--
+				<xpath expr="//form[@string='Company']" position="attributes">
+					<attribute name="create">false</attribute>
+				</xpath>
+-->
+				<field name="vat_check_vies" position="replace"/>
+
+			<!-- Form juridique -->
+				<xpath expr="//field[@name='partner_id']" position="after">
+					<field name="form_juridique"/>
+				</xpath>
+
+				<xpath expr="//field[@name='vat']" position="attributes">
+					<attribute name="string">TVA</attribute>
+				</xpath>
+
+				<xpath expr="//field[@name='vat']" position="after">
+					<field name="rcs"/>
+				</xpath>
+
+				<xpath expr="//field[@name='company_registry']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+<!-- 
+				<xpath expr="//form/sheet/notebook/page" position="after">
+					<page name="other_info" string="Other Informations">
+						<group>
+							<group>
+								<field name="commercial_partner_id" domain="[('is_company','=',False)]"/>
+							</group>
+						</group>
+					</page>
+				</xpath>
+ -->
+			</field>
+		</record>
+	</data>
+</odoo>

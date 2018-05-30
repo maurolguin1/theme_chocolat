@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="choco_view_partner_bank_form" model="ir.ui.view">
+			<field name="name">Choco view partner bank</field>
+			<field name="model">res.partner.bank</field>
+			<field name="inherit_id" ref="base.view_partner_bank_form"/>
+			<field name="arch" type="xml">
+
+				<field name="acc_number" position="after">
+					<field name="rib"/>
+				</field>
+
+				<field name="partner_id" position="replace"/>
+
+				<field name="bank_id" position="after">
+					<field name="partner_id"/>
+				</field>
+
+			</field>
+		</record>
+
+		<record id="choco_view_res_bank_form" model="ir.ui.view">
+			<field name="name">Choco view bank</field>
+			<field name="model">res.bank</field>
+			<field name="inherit_id" ref="base.view_res_bank_form"/>
+			<field name="arch" type="xml">
+
+				<field name="bic" position="attributes">
+					<attribute name="string">BIC</attribute>
+				</field>
+
+				<field name="bic" position="after">
+					<field name="bank_code"/>
+					<field name="iban"/>
+					<field name="counter_code"/>
+				</field>
+
+			</field>
+		</record>
+	</data>
+</odoo>

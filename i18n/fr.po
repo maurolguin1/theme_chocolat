@@ -1,0 +1,545 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* theme_chocolat
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20170828\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-06 11:57+0000\n"
+"PO-Revision-Date: 2017-10-06 11:57+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_footer_custom
+msgid "About us"
+msgstr "A propos"
+
+#. module: theme_chocolat
+#: model:website.menu,name:theme_chocolat.services_page_link
+msgid "About us?"
+msgstr "Qui sommes-nous ?"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_footer_custom
+msgid "BIO"
+msgstr "BIO"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.custom_header
+msgid "Bio"
+msgstr "Bio"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_footer_custom
+msgid "CATEGORY"
+msgstr "CATEGORIES"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_footer_custom
+msgid "CHOCOLATE BAR"
+msgstr "TABLETTES"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_footer_custom
+msgid "CONFECTIONERY AND CASE"
+msgstr "CONFISERIES ET COFFRETS"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.custom_header
+msgid "Chocolate bar"
+msgstr "Tablette"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_footer_custom
+msgid "Connect with us"
+msgstr "Nous contacter"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_layout_footer_copyright
+msgid "Copyright &amp;copy;"
+msgstr "Copyright &amp;copy;"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_footer_custom
+msgid "Follow us"
+msgstr "Suivez-nous"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_footer_custom
+msgid "RAW MATERIAL"
+msgstr "MATIERES PREMIERES"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.custom_header
+msgid "Row material"
+msgstr "Matières premières"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.custom_header
+msgid "confectionery and case"
+msgstr "Confiseries et coffrets"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+#: model:ir.ui.view,arch_db:theme_chocolat.report_invoice_layout_mtt
+msgid "<strong>Fiscal Position Remark:</strong>"
+msgstr "<strong>Remarque sur le régime fiscal :</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "<strong>Payment Terms:</strong>"
+msgstr "<strong>Conditions de paiement:</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "<strong>Salesperson:</strong>"
+msgstr "<strong>Vendeur :</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "<strong>Shipping address:</strong>"
+msgstr "<strong>Adresse de livraison:</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "<strong>Subtotal: </strong>"
+msgstr "<strong>Sous-total : </strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "<strong>Total Without Taxes</strong>"
+msgstr "<strong>Total hors-taxe</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "<strong>Your Reference:</strong>"
+msgstr "<strong>Votre référence : </strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Date Ordered:"
+msgstr "Date de commande :"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+#: model:ir.ui.view,arch_db:theme_chocolat.report_invoice_layout_mtt
+msgid "Disc.(%)"
+msgstr "Rem.(%)"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Invoicing address:"
+msgstr "Adresse de facturation :"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Invoicing and shipping address:"
+msgstr "Adresse de facturation et de livraison :"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Order #"
+msgstr "Commande n°"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Price"
+msgstr "Prix"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Quantity"
+msgstr "Qté"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Quotation #"
+msgstr "Devis n°"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Quotation Date:"
+msgstr "Date du devis:"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Total Price"
+msgstr "Prix total"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "VAT:"
+msgstr "TVA :"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_delivery_document
+msgid "<span>Delivery Order</span>"
+msgstr "<span>Livraison de commande</span>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_delivery_document
+msgid "<strong>Delivered Quantity</strong>"
+msgstr "<strong>Qté délivrée</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "<strong>Fiscal Position Remark:</strong>"
+msgstr "<strong>Remarque sur le régime fiscal :</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_delivery_document
+msgid "<strong>Order (Origin)</strong>"
+msgstr "<strong>Commande (Origine)</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_delivery_document
+msgid "<strong>Ordered Quantity</strong>"
+msgstr "<strong>Qté commandée</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "<strong>Payment Terms:</strong>"
+msgstr "<strong>Conditions de paiement:</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_delivery_document
+msgid "<strong>Product</strong>"
+msgstr "<strong>Article</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "<strong>Salesperson:</strong>"
+msgstr "<strong>Vendeur :</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "<strong>Shipping address:</strong>"
+msgstr "<strong>Adresse de livraison:</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "<strong>Subtotal: </strong>"
+msgstr "<strong>Sous-total : </strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "<strong>Total Without Taxes</strong>"
+msgstr "<strong>Total HT</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+#: model:ir.ui.view,arch_db:theme_chocolat.report_invoice_layout_mtt
+msgid "<strong>Total</strong>"
+msgstr "<strong>Total</strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "<strong>Your Reference:</strong>"
+msgstr "<strong>Votre référence : </strong>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_footer_custom
+msgid "About us"
+msgstr "A propos"
+
+#. module: theme_chocolat
+#: model:ir.model.fields,field_description:theme_chocolat.field_res_country_active
+msgid "Active"
+msgstr "Actif"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_delivery_document
+msgid "All items couldn't be shipped, the remaining ones will be shipped as soon as they become available."
+msgstr "Tous les éléments n'ont pas pu être expédiés, le reliquat sera expédié dès qu'il sera disponible"
+
+#. module: theme_chocolat
+#: model:ir.model,name:theme_chocolat.model_res_bank
+msgid "Bank"
+msgstr "Banque"
+
+#. module: theme_chocolat
+#: model:ir.model,name:theme_chocolat.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "Comptes bancaires"
+
+#. module: theme_chocolat
+#: model:ir.model.fields,field_description:theme_chocolat.field_res_bank_bank_code
+msgid "Bank code"
+msgstr "Code banque"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_view_order_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: theme_chocolat
+#: model:ir.model,name:theme_chocolat.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_view_order_form
+msgid "Confirm Order by mail"
+msgstr "Confirmer par email"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_view_order_form
+msgid "Confirm Sale"
+msgstr "Confirmer la vente"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_view_picking_form
+msgid "Confirm delivery send by mail"
+msgstr "Confirmer livraison par email"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_footer_custom
+msgid "Connect with us"
+msgstr "Nous contacter"
+
+#. module: theme_chocolat
+#: model:ir.model.fields,field_description:theme_chocolat.field_res_bank_counter_code
+msgid "Counter code"
+msgstr "Code guichet"
+
+#. module: theme_chocolat
+#: model:ir.model,name:theme_chocolat.model_res_country
+msgid "Country"
+msgstr "Pays"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_view_order_form
+msgid "Create Invoice"
+msgstr "Créer une facture"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Date Ordered:"
+msgstr "Date de commande :"
+
+#. module: theme_chocolat
+#: code:addons/theme_chocolat/models/stock.py:31
+#, python-format
+msgid "Delivery Order - Send by mail"
+msgstr "Livraison de commande - Envoi par email"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+#: model:ir.ui.view,arch_db:theme_chocolat.report_invoice_layout_mtt
+msgid "Disc.(%)"
+msgstr "Rem.(%)"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_footer_custom
+msgid "Follow us"
+msgstr "Suivez-nous"
+
+#. module: theme_chocolat
+#: model:ir.model,name:theme_chocolat.model_account_invoice
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Invoicing address:"
+msgstr "Adresse de facturation :"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Invoicing and shipping address:"
+msgstr "Adresse de facturation et de livraison :"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Order #"
+msgstr "Commande n°"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Quotation"
+msgstr "Devis"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Order Confirm"
+msgstr "Confirmation de commande"
+
+#. module: theme_chocolat
+#: code:addons/theme_chocolat/models/sale.py:28
+#, python-format
+msgid "Order confirmation - Send by mail"
+msgstr "Confirmation de commande - Envoi par email"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.res_company_chocolaterie_view
+msgid "Other Informations"
+msgstr "Autres Informations"
+
+#. module: theme_chocolat
+#: model:ir.model,name:theme_chocolat.model_account_payment
+msgid "Payments"
+msgstr "Paiements"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Price"
+msgstr "Prix"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_view_order_form
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.product_public_category_search_view
+msgid "Product Categories"
+msgstr "Catégories d'articles"
+
+#. module: theme_chocolat
+#: model:ir.actions.act_window,name:theme_chocolat.product_public_category_action_form
+#: model:ir.ui.view,arch_db:theme_chocolat.product_public_category_search_view
+msgid "Product Public Categories"
+msgstr "Catégories publiques d'article"
+
+#. module: theme_chocolat
+#: model:ir.ui.menu,name:theme_chocolat.menu_product_public_categ
+msgid "Product Public Category"
+msgstr "Catégories publiques d'article"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Quotation #"
+msgstr "Devis n°"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Quotation Date:"
+msgstr "Date du devis:"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_view_order_form
+msgid "Send by Email"
+msgstr "Envoyer par email"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_view_order_form
+msgid "Set to Quotation"
+msgstr "Mettre en Devis"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.report_invoice_layout_mtt
+msgid "Source Document"
+msgstr "Document d'origine"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_delivery_document
+msgid "This shipment is a backorder of"
+msgstr "This shipment is a backorder of"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "Total Price"
+msgstr "Prix total"
+
+#. module: theme_chocolat
+#: model:ir.model,name:theme_chocolat.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.report_layout_footer_mtt
+msgid "VAT :"
+msgstr "TVA :"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_saleorder_document
+msgid "VAT:"
+msgstr "TVA :"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_report_delivery_document
+msgid "<span><strong>Customer Address:</strong></span>"
+msgstr "<span><strong>Adresse de livraison :</strong></span>"
+
+
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_checkout
+msgid "Billing Address"
+msgstr "Adresse de facturation"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_checkout
+msgid "Confirm <span class=\"fa fa-long-arrow-right\"/>"
+msgstr "Confirmer <span class=\"fa fa-long-arrow-right\"/>"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_checkout
+msgid "Shipping Address"
+msgstr "Adresse de livraison"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_checkout
+msgid "Your Order"
+msgstr "Votre commande"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_checkout
+msgid "<i class=\"fa fa-plus-square\" aria-hidden=\"true\"/> Add an address"
+msgstr "<i class=\"fa fa-plus-square\" aria-hidden=\"true\"/> Ajouter une adresse"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_checkout
+msgid "<span class=\"fa fa-long-arrow-left\"/> Return to Cart"
+msgstr "<span class=\"fa fa-long-arrow-left\"/> Retour au panier"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_address_kanban
+msgid "<i class=\"fa fa-check\"/> Ship to this address"
+msgstr "<i class=\"fa fa-check\"/> Expédier à cette adresse"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_address_kanban
+msgid "Edit this address"
+msgstr "Modifier cette adresse"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_address_kanban
+msgid "Select this address"
+msgstr "Sélectionner cette adresse"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_signup
+msgid "Back to Login"
+msgstr "Page d'authentification"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_signup
+msgid "Sign up"
+msgstr "S'enregistrer"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_contactus_thanks
+msgid "Thanks!"
+msgstr "Merci !"
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_contactus_thanks
+msgid "We will get back to you shortly."
+msgstr "Nous reviendrons vers vous le plus rapidement possible."
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_contactus_thanks
+msgid "Your message has been sent successfully."
+msgstr "Votre message a été envoyé avec succès."
+
+#. module: theme_chocolat
+#: model:ir.ui.view,arch_db:theme_chocolat.choco_contactus_thanks
+msgid "If you have an emergency, do not hesitate to contact us by phone:"
+msgstr "En cas d'urgence, n'hésitez pas à nous contacter par téléphone/mail :"

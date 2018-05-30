@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<!-- Delivery Order - Email Template -->
+      <record id="choco_mail_template_delivery_wizard" model="mail.template">
+         <field name="name">Delivery Order - Send by mail</field>
+         <field name="email_from">${(object.user_id.email and '%s &lt;%s&gt;' % (object.user_id.name, object.user_id.email) or '')|safe}</field>
+         <field name="subject">Livraison de produit (Ref ${object.name or 'n/a' })</field>
+         <field name="partner_to">${object.partner_id.id}</field>
+         <field name="model_id">340</field>
+         <field name="auto_delete" eval="True"/>
+         <field name="report_template" ref="stock.action_report_delivery"/>
+         <field name="report_name">BON_DE_LIVRAISON_${(object.name or '').replace('/','_')}</field>
+         <field name="lang">${object.partner_id.lang}</field>
+         <field name="body_html"><![CDATA[
+
+			<p>Bonjour ${object.partner_id.name},</p><br/>
+
+			<p>
+				Nous avons le plaisir de vous confirmer l'expédition de votre commande ${object.origin}. <br> La date de livraison est prévue pour le ${(object.delivery_date)}, à l'adresse suivante :
+			</p><br><br>
+
+
+			<table style="width: 75%; margin-left: 8%;">
+            <thead style="background-color: #EEE;">
+               <tr>
+                  <th style="text-align: center;">ADRESSE DE LIVRAISON</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td style="padding-left: 20%;">
+                     <span>${object.partner_id.name}</span><br/>
+                     <span>${object.client_street_address}</span><br/>
+                     <span>${object.city}, ${object.code_zip}</span><br/>
+                     <span>${object.country}</span><br/>
+                     <span>${object.phone}</span>
+                  </td>
+               </tr>
+            </tbody>
+         </table><br/>
+
+			<div style="margin-left: 200px;">
+				<hr style="width: 45%; color: black; margin-top: 30px; margin-bottom: 30px;">
+			</div><br/>
+
+			<p>Nous vous remercions pour votre confiance et vous souhaitons une bonne dégustation.</p>
+
+			]]></field>
+      </record>
+
+
+      <!-- Notification Email template for Delivery Order -->
+      <record id="choco_mail_template_delivery_order" model="mail.template">
+         <field name="name">Delivery Order - Notification Email</field>
+         <field name="subject">${object.subject}</field>
+         <field name="model_id" ref="mail.model_mail_message"/>
+         <field name="auto_delete" eval="True"/>
+         <field name="body_html"><![CDATA[<html>
+            <head></head>
+            </style>
+            % set record = ctx.get('record')
+            % set company = record and record.company_id or user.company_id
+            <body style="margin: 20px; padding: 20px;">
+            	<table border="0" width="100%" cellpadding="0" bgcolor="#ededed" style="padding: 20px; background-color: #ededed" summary="o_mail_notification">
+                  <tbody>
+
+                  <!-- HEADER -->
+                  <tr>
+                     <td align="center" style="min-width: 590px;">
+                        <table width="590" border="0" cellpadding="0" bgcolor="#FFF" style="background-color: #FFF; min-width: 590px; padding: 20px;">
+                        <tr>
+                           <td valign="middle" align="center">
+                              <span style="font-size:20px; font-weight: bold;">
+                                 Votre commande est partie !
+                              </span>
+                           </td>
+                           <td valign="middle" align="right">
+                              <img src="/logo.png?company=${company.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${company.name}">
+                           </td>
+                         </tr>
+                       </table>
+                     </td>
+                  </tr>
+
+                   <!-- CONTENT -->
+                   <tr>
+                     <td align="center" style="min-width: 590px;">
+                        <table width="590" border="0" cellpadding="0" bgcolor="#ffffff" style="min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px;">
+                           <tbody>
+                              <td valign="top" style="font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;">
+		                           ${object.body | safe}
+		                        </td>
+                           </tbody>
+                        </table>
+                     </td>
+                  </tr>
+
+                  <!-- FOOTER -->
+                  <tr>
+                     <td align="center" style="min-width: 590px;">
+                        <table width="590" border="0" cellpadding="0"  style="z-index: 30; min-width: 590px; padding: 20px; background-image: url('http://chocolaterierobert.fr/theme_chocolat/static/images/bgfooter.png'); background-repeat: no-repeat; background-size: cover;">
+	                        <tr>
+	                           <td valign="middle" align="left" style="padding-top: 10px; padding-bottom: 10px; font-size: 12px; font-weight: bold; color: black; text-decoration: none;">
+	                             ${company.name}<br/>
+	                             ${company.phone or ''}
+	                           </td>
+	                           <td valign="middle" align="right" style="padding-top: 10px; padding-bottom: 10px; font-size: 12px; font-weight: bold; color: black; text-decoration: none;">
+	                             % if company.email:
+	                             <a href="mailto:${company.email}" style="text-decoration:none;">${company.email}</a><br/>
+	                             % endif
+	                             % if company.website:
+	                                 <a href="${company.website}" style="text-decoration:none;">
+	                                     ${company.website}
+	                                 </a>
+	                             % endif
+	                           </td>
+	                        </tr>
+                        </table>
+                     </td>
+                  </tr>
+
+                  </tbody>
+               </table>
+
+            </body>
+         </html>
+         ]]></field>
+      </record>
+
+	</data>
+</odoo>

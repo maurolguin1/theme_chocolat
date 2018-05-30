@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+<template id="report_layout_footer_mtt" inherit_id="report.external_layout_footer">
+	<xpath expr="//div[@class='footer']" position="replace">
+
+		<div class="footer text-muted" style="font-size: 13px">
+			<div class="row" style="border-top: 1px solid black; padding-top: 6px;">
+				<div class="col-xs-4" style="margin-bottom: 10px; margin-top: 5px; letter-spacing: 1px">
+					<span t-field="company.form_juridique"/> <span t-field="company.name"/><br/>
+					<span t-if="company.street"><span t-field="company.street"/></span> <span t-if="company.street2"><span t-field="company.street2"/></span><br/>
+					<span t-if="company.zip"><span t-field="company.zip"/></span><span t-if="company.city"> - <span t-field="company.city"/></span><br/>
+					<span t-if="company.country_id">
+						<span t-field="company.country_id.name"/>
+					</span>
+				</div>
+		      <div class="col-xs-8 text-right" style="margin-bottom: 10px; margin-top: 5px;">
+	  				<span t-if="not company.custom_footer">
+						RCS : <span t-field="company.rcs"/> <span t-field="company.city"/><br/>
+						<span t-if="company.vat">TVA Intra Communautaire : <span t-field="company.vat"/></span><br/>
+						<span t-if="company.siret">SIRET : <span t-field="company.siret"/></span>
+	  				</span><br/>
+					<span style="float: right">
+						<span>Page : </span>
+						<span><span class="page"/></span>
+						<span>/</span>
+						<span><span class="topage"/></span>
+					</span>
+		      </div>
+
+				<t t-if="company.custom_footer">
+					<span t-raw="company.rml_footer"/>
+				</t>
+			</div>
+		</div>
+
+	</xpath>
+</template>
+</data>
+</openerp>

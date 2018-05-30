@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="product_public_category_search_view" model="ir.ui.view">
+         <field name="name">product.public.category.search</field>
+         <field name="model">product.public.category</field>
+         <field name="arch" type="xml">
+            <search string="Product Public Categories">
+              <field name="name" string="Product Categories"/>
+              <field name="parent_id"/>
+            </search>
+         </field>
+      </record>
+
+		<record id="product_public_category_action_form" model="ir.actions.act_window">
+         <field name="name">Product Public Categories</field>
+         <field name="type">ir.actions.act_window</field>
+         <field name="res_model">product.public.category</field>
+         <field name="view_type">form</field>
+         <field name="view_mode">tree,form</field>
+         <field name="search_view_id" ref="product_public_category_search_view"/>
+         <field name="view_id" ref="website_sale.product_public_category_tree_view"/>
+      </record>
+
+      <menuitem id="menu_product_public_categ"
+      	name="Product Public Category"
+      	action="product_public_category_action_form"
+      	parent="sale.prod_config_main"
+      	sequence="4" groups="base.group_system"
+      />
+
+      <menuitem id="sale.menu_product_category_action_form"
+         action="product.product_category_action_form"
+         parent="sale.prod_config_main"
+         groups="base.group_system"
+         sequence="2"
+      />
+
+      <menuitem id="sale.menu_product_uom_categ_form_action"
+         action="product.product_uom_categ_form_action"
+         parent="sale.prod_config_main"
+         groups="base.group_system"
+         sequence="7"
+      />
+
+	</data>
+</odoo>

@@ -1,0 +1,385 @@
+@charset "utf-8";
+/* CSS Document */
+//uncomment  this to test on product page
+.test {
+  //border: thin dotted brown;
+  margin-bottom: 30px;
+  background-color: #4db9cc;
+}
+
+.mm{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.txt{
+  a:link{
+    padding-top: 16px;
+    padding-bottom: 0px;
+    padding-left: auto;
+    padding-right: auto;
+    color: #3f3f3f;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: small;
+    //font-weight:bold;
+  }:hover{
+     text-decoration: none;
+   }
+  padding-bottom: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+hr.prodSeparation{
+  border-top: 1px solid brown;
+}
+
+//if screen less than 1000px then resize product name
+#bann{
+  width:100%;
+  height: 100%;
+  display: block;
+
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.8s;
+  transition: all 0.3s;
+
+}
+
+
+.btn-default {
+  //color: #63d829;
+  background-color: #ffffff;
+  border-color: #cccccc;
+  border: solid thin;
+}
+
+/////////////////////////////styles for next and preview button on product if product appears on more than 1 page
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 50px 0 5px 0;
+  border-radius: 4px;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  z-index: 2;
+  color: #ffffff;
+  background-color: #26292b;
+  border-color: #26292b;
+  cursor: default;
+}
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;
+     color: #26292b; 
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    margin-left: -1px;
+}
+.breadcrumb {
+  padding: 8px 15px;
+  margin: 8% 0px 20px 9%;
+  list-style: none;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+
+  a {
+    color: #26292b;
+    text-decoration: none;
+    font-weight: bolder;
+  }
+}
+.btn-primary {
+  color: #ffffff;
+  background-color: #26292b;
+  border-color: #26292b;
+}
+.btn-primary:hover{
+    color: #ffffff;
+    background-color: #41494e;
+    border-color: #41494e;
+}
+
+.contactButton{
+  color: #e6e3bb;
+  background-color: #26292b;
+  border-color: #26292b;
+  //width: 100%;
+  border-radius: 0;
+  margin-left: -15px;
+  padding: 10px 50%;
+
+  /*a:hover{
+    color: white;
+  }*/
+}
+
+.contactButton:hover{
+  color: #89492f;
+}
+.list-inline > li {
+  display: block;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.divider{
+  visibility: hidden;
+}
+
+
+/***************add line on product***********/
+.oe_product_image {
+    margin-left: 0%;
+    margin-right: 0%;
+    /* top: 0; */
+    /* bottom: 0%; */
+    border-top: solid 6px #89492f;
+}
+
+// adjust product description on categorie pages
+.pDescription {
+    position: absolute;
+    left: 4%;
+    right: 4%;
+    bottom: -80px;
+    overflow: hidden;
+    padding: 0 15px 24px 10px;
+    min-height: 56px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgb(222, 193, 144);
+    z-index: 5;
+}
+
+.t{
+  background-color: beige;
+}
+
+/************************scale image on hover **************************/
+
+/************PUT THIS TO ALL IMAGES ON CATEGORIES AND ON MAIN PAGES*******************/
+
+.animatePicture{
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.3s;
+}
+.animatePicture:hover {
+      -moz-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+}
+
+/**********************EXPRESS PURCHASE ****************/
+
+.expressPurchase{
+    font-size: 11px;
+    border: solid thin;
+    padding: 3px;
+    display: inline;
+    /* margin: 0px; */
+    float: right;
+    /*margin-right: -4.5%;
+    margin-bottom: -35px;*/
+    margin-right: -2%;
+    margin-bottom: -35px;  // 9% en pourcentage
+}
+
+/************************product focus ******************/
+.breadcrumb > li {
+    /*display: inline-block;
+    border: solid 1.4px;
+    padding: 14px;
+    margin-right: 4px;
+    border-right: none;*/
+}
+
+
+/**********************my notification box **********************/
+
+.mynotification{
+    /*position: absolute;
+    z-index: 99;
+    background-color: gold;
+    padding: 20px; 
+    margin-bottom: 100px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 3px;
+    padding-top: 5px;
+    margin-top: -50px;
+    border-radius: 5px;
+    width: 36%;
+    position: absolute;
+    z-index: 99;
+    background-color: #e8e9ece0;
+    margin-bottom: 100px;
+    padding-left: 10px;
+    width: 100%;
+    height: 120%;
+    padding-right: 3px;
+    padding-top: 15px;
+    margin-top: -60px;
+    border-radius: 0px;
+    margin-left: -63%;*/
+    position: absolute;
+    z-index: 99;
+    //background-color: #e8e9ece0;
+    //background-color: #f3eded;
+    //background-color: #f3eeee;
+    background-color: gold;
+    margin-bottom: 100px;
+    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+    padding-right: 3px;
+    padding-top: 15px;
+    border-radius: 0px;
+    left: -0%;
+    top: -0%;
+    right: -0%;
+}
+.notificationPopup{
+      /* width: 180px; */
+    /*padding: 18px 24px 18px 18px;
+    display: block;
+    position: fixed;
+    background-color: white;
+    border: thin dotted brown;*/
+
+    right: -80%;
+
+    /*z-index: 99;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    bottom: 20%;*/
+
+
+    padding: 22px 33px 29px 34px;
+    display: block;
+    position: fixed;
+    //background-color: #e2dede;
+    //background-color: #f3eeee;
+    //border: thin dotted brown;
+    z-index: 99;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    bottom: 20%;
+    //border-radius: 362px;
+}
+
+
+.liPopUP{
+      
+    right: -80%;
+
+    /*z-index: 99;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    bottom: 20%;*/
+
+
+    padding: 22px 33px 29px 34px;
+    //background-color: #e2dede;
+    background-color: #f3eeee;
+    //border: thin dotted brown;
+    z-index: 99;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    bottom: 20%;
+    //border-top: thin dotted;
+    border-radius: 320px;
+
+}
+
+/*********************display div popup before added to cart **************************/
+.poupExpress{
+    background-color: #6f3e2a;
+    padding: 11px;
+    color: white;
+    display: inline;
+    position: absolute;
+    bottom: 10px;
+    right: 7px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.poupExpress:hover{
+      background-color: #89492f;
+}
+
+
+/***********************personalize productBox number at menu *****************/
+.label-primary {
+    //background-color: #89492f;
+}
+
+/***********************basic styles for all button*****************/
+/*.btn-primary {
+    color: #ffffff;
+    background-color: #4b5256;
+    border-color: #4b5256;
+}
+
+.btn-primary:hover {
+    color: #ffffff;
+    background-color: #26292b;
+    border-color: #26292b;
+}*/
+
+
+/******************condition de livraison **********************/
+@media only screen and (max-width: 1024px) {
+    .conditionMenu {
+        visibility: hidden;
+        position: fixed;
+    }
+
+    .conditionContent {
+        width: 90%;
+        margin-top: 12%;
+        float: right;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .conditionMenu {
+        visibility: visible;
+    }
+
+    .conditionContent {
+        /*width: 90%;*/
+        margin-top: 5%;
+        visibility: visible;
+    }
+    
+}
+
+
+/************************promo label **********************/
+/*.oe_product .ribbon {
+    font: bold 15px Sans-Serif;
+    color: white;
+    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    position: relative;
+    padding: 7px 0;
+    left: -5px;
+    top: 41px;
+    width: 70px;
+    cursor: default;
+    */
+
+.ribbon-wrapper {
+        right: 5%;
+        top: 6%;
+}

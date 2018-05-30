@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="choco_view_picking_form" model="ir.ui.view">
+			<field name="name">Choco View Picking Form</field>
+			<field name="model">stock.picking</field>
+			<field name="inherit_id" ref="stock.view_picking_form"/>
+			<field name="arch" type="xml">
+				<button name="do_new_transfer" position="after">
+					<button name="action_delivery_order_sent" type="object" states="assigned,done" string="Confirm delivery send by mail" class="btn-primary"/>
+					<!-- <button name="compute_order" type="object" string="Order Origin" class="btn-primary"/> -->
+				</button>
+				<field name="min_date" position="replace">
+					<field name="delivery_date" string="A livrer le"/>
+				</field>
+				<!-- <field name="origin" position="after">
+					<field name="client_name"/>
+					<field name="client_street_address"/>
+					<field name="code_zip"/>
+					<field name="city"/>
+					<field name="country"/>
+					<field name="phone"/>
+					<field name="delivery_date"/>
+				</field> -->
+			</field>
+		</record>
+
+	</data>
+</odoo>
