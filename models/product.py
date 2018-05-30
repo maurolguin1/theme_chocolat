@@ -24,4 +24,4 @@ class ProductTemplate(models.Model):
 
 		for p in self:
 			p.website_price = round(p.product_variant_id.website_price, 1)
-			p.website_public_price = round(p.product_variant_id.website_public_price, 1)
+			p.website_public_price = p.product_variant_id.website_public_price
